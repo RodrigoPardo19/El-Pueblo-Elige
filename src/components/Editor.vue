@@ -3,60 +3,60 @@
     <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
       <div class="menubar">
         <button
-            class="menubar__button"
-            :class="{ 'is-active': isActive.bold() }"
-            @click="commands.bold"
+          class="menubar__button"
+          :class="{ 'is-active': isActive.bold() }"
+          @click="commands.bold"
         >
           Negrita
         </button>
         <button
-            class="menubar__button"
-            :class="{
+          class="menubar__button"
+          :class="{
             'is-active': isActive.customstyle({ level: 'body-green' }),
           }"
-            @click="commands.customstyle({ level: 'body-green' })"
+          @click="commands.customstyle({ level: 'body-green' })"
         >
           Verde
         </button>
         <button
-            class="menubar__button"
-            :class="{ 'is-active': isActive.customstyle({ level: 'body-blue' }) }"
-            @click="commands.customstyle({ level: 'body-blue' })"
+          class="menubar__button"
+          :class="{ 'is-active': isActive.customstyle({ level: 'body-blue' }) }"
+          @click="commands.customstyle({ level: 'body-blue' })"
         >
           Azul
         </button>
         <button
-            class="menubar__button"
-            :class="{ 'is-active': isActive.customstyle({ level: 'body-red' }) }"
-            @click="commands.customstyle({ level: 'body-red' })"
+          class="menubar__button"
+          :class="{ 'is-active': isActive.customstyle({ level: 'body-red' }) }"
+          @click="commands.customstyle({ level: 'body-red' })"
         >
           Rojo
         </button>
         <button
-            class="menubar__button"
-            :class="{ 'is-active': isActive.italic() }"
-            @click="commands.italic"
+          class="menubar__button"
+          :class="{ 'is-active': isActive.italic() }"
+          @click="commands.italic"
         >
           Cursiva
         </button>
         <button
-            class="menubar__button"
-            :class="{ 'is-active': isActive.heading({ level: 1 }) }"
-            @click="commands.heading({ level: 1 })"
+          class="menubar__button"
+          :class="{ 'is-active': isActive.heading({ level: 1 }) }"
+          @click="commands.heading({ level: 1 })"
         >
           Título 1
         </button>
         <button
-            class="menubar__button"
-            :class="{ 'is-active': isActive.heading({ level: 2 }) }"
-            @click="commands.heading({ level: 2 })"
+          class="menubar__button"
+          :class="{ 'is-active': isActive.heading({ level: 2 }) }"
+          @click="commands.heading({ level: 2 })"
         >
           Título 2
         </button>
         <button
-            class="menubar__button"
-            :class="{ 'is-active': isActive.heading({ level: 3 }) }"
-            @click="commands.heading({ level: 3 })"
+          class="menubar__button"
+          :class="{ 'is-active': isActive.heading({ level: 3 }) }"
+          @click="commands.heading({ level: 3 })"
         >
           Título 3
         </button>
@@ -64,9 +64,9 @@
     </editor-menu-bar>
 
     <editor-content
-        class="editor__content"
-        style="background: rgba(100, 100, 0, 0.2)"
-        :editor="editor"
+      class="editor__content"
+      style="background: rgba(100, 100, 0, 0.2)"
+      :editor="editor"
     />
 
     <pre>{{ localHTML }}</pre>

@@ -1,7 +1,11 @@
 <template>
   <div class="option">
-    <div class="container">
-      <img alt="IconOption" :src="pathGrey" />
+    <div
+      class="container"
+      @mouseover="changeGreenIcon"
+      @mouseleave="changeGreyIcon"
+    >
+      <img alt="IconOption" :src="path" />
       <a href=""> {{ value }} </a>
     </div>
   </div>
@@ -17,8 +21,16 @@ export default {
   },
   data() {
     return {
-      url: this.pathGreen,
+      path: this.pathGrey,
     };
+  },
+  methods: {
+    changeGreenIcon() {
+      this.path = this.pathGreen;
+    },
+    changeGreyIcon() {
+      this.path = this.pathGrey;
+    },
   },
 };
 </script>
@@ -68,9 +80,5 @@ a {
 
 .container:hover a {
   color: #11101b;
-}
-
-.container:hover img {
-  background-image: v-bind(url);
 }
 </style>

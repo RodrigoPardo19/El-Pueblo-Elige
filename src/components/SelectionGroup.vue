@@ -8,6 +8,7 @@
       :pathGrey="option.pathGrey"
       :pathGreen="option.pathGreen"
     />
+    <img v-if="groupType == 'topics'" :src="iconAdd" @click="addTopic" />
   </div>
 </template>
 
@@ -59,11 +60,21 @@ export default {
           pathGreen: require("@/assets/icons/green/topic-enviroment.svg"),
         },
       ],
+      iconAdd: require("@/assets/icons/green/event-add.svg"),
     };
   },
   computed: {
     detectData() {
       return this.$data[this.groupType];
+    },
+  },
+  methods: {
+    addTopic() {
+      this.$data["topics"].push({
+        value: "Economia",
+        pathGrey: require("@/assets/icons/grey/topic-economy.svg"),
+        pathGreen: require("@/assets/icons/green/topic-economy.svg"),
+      });
     },
   },
 };
@@ -83,5 +94,16 @@ export default {
   align-self: end;
   font-size: small;
   color: white;
+}
+
+img {
+  border-radius: 50px;
+  align-self: center;
+  justify-self: center;
+}
+
+img:hover {
+  background-color: #fff;
+  padding: 2%;
 }
 </style>
