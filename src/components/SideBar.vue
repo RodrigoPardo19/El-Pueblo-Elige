@@ -21,7 +21,8 @@ export default {
 
 <style scoped>
 .side-bar {
-  width: 240px;
+  background-color: #11101b;
+  width: 255px;
   height: 930px;
   border-right: solid 1px;
 }

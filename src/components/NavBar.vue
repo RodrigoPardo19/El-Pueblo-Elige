@@ -4,7 +4,7 @@
       <div class="container-icon-text">
         <img
           alt="Home Icon"
-          src="../assets/icons/awesome-home.svg"
+          src="../assets/icons/black/nav-home.svg"
           class="nav-icon"
         />
         <a href="">Home</a>
@@ -12,7 +12,7 @@
       <div class="container-icon-text">
         <img
           alt="Candidates Icon"
-          src="../assets/icons/candidates.svg"
+          src="../assets/icons/black/nav-candidates.svg"
           class="nav-icon"
         />
         <a href="">Candidatos</a>
@@ -23,7 +23,11 @@
     </div>
     <div class="container-end">
       <div class="container-icon-text">
-        <img alt="User Icon" src="../assets/icons/user.svg" class="nav-icon" />
+        <img
+          alt="User Icon"
+          src="../assets/icons/user-photos/candidate-photo.svg"
+          class="nav-icon"
+        />
         <a href="">Profile</a>
       </div>
     </div>
@@ -50,6 +54,7 @@ a {
   align-self: center;
   margin-left: 4px;
   margin-top: 6px;
+  color: #2c3e50;
 }
 
 .nav-icon {
@@ -57,6 +62,7 @@ a {
   width: 23px;
   justify-self: center;
   align-self: center;
+  color: #929dbd;
 }
 
 .container-start {

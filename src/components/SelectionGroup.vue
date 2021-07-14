@@ -5,7 +5,8 @@
       v-for="(option, index) in detectData"
       :key="index"
       :value="option.value"
-      :path="option.path"
+      :pathGrey="option.pathGrey"
+      :pathGreen="option.pathGreen"
     />
   </div>
 </template>
@@ -27,26 +28,35 @@ export default {
       sections: [
         {
           value: "Perfil",
-          path: require("@/assets/icons/candidate-profile.svg"),
+          pathGrey: require("@/assets/icons/grey/candidate-profile.svg"),
+          pathGreen: require("@/assets/icons/green/candidate-profile.svg"),
         },
         {
           value: "Propuesta Electoral",
-          path: require("@/assets/icons/candidate-workplan.svg"),
+          pathGrey: require("@/assets/icons/grey/candidate-workplan.svg"),
+          pathGreen: require("@/assets/icons/green/candidate-workplan.svg"),
         },
         {
           value: "Contenido Extra",
-          path: require("@/assets/icons/candidate-media.svg"),
+          pathGrey: require("@/assets/icons/grey/candidate-media.svg"),
+          pathGreen: require("@/assets/icons/green/candidate-media.svg"),
         },
-        { value: "Foro", path: require("@/assets/icons/candidate-foro.svg") },
+        {
+          value: "Foro",
+          pathGrey: require("@/assets/icons/grey/candidate-foro.svg"),
+          pathGreen: require("@/assets/icons/green/candidate-foro.svg"),
+        },
       ],
       topics: [
         {
           value: "Educación",
-          path: require("@/assets/icons/topic-education.svg"),
+          pathGrey: require("@/assets/icons/grey/topic-education.svg"),
+          pathGreen: require("@/assets/icons/green/topic-education.svg"),
         },
         {
           value: "Medio Ambiente",
-          path: require("@/assets/icons/topic-enviroment.svg"),
+          pathGrey: require("@/assets/icons/grey/topic-enviroment.svg"),
+          pathGreen: require("@/assets/icons/green/topic-enviroment.svg"),
         },
       ],
     };
@@ -72,5 +82,6 @@ export default {
   justify-self: start;
   align-self: end;
   font-size: small;
+  color: white;
 }
 </style>

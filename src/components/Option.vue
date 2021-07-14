@@ -1,7 +1,7 @@
 <template>
   <div class="option">
     <div class="container">
-      <img alt="IconOption" :src="path" />
+      <img alt="IconOption" :src="pathGrey" />
       <a href=""> {{ value }} </a>
     </div>
   </div>
@@ -12,7 +12,13 @@ export default {
   name: "OptionSelectionGroup",
   props: {
     value: String,
-    path: String,
+    pathGrey: String,
+    pathGreen: String,
+  },
+  data() {
+    return {
+      url: this.pathGreen,
+    };
   },
 };
 </script>
@@ -23,11 +29,7 @@ export default {
   flex-direction: row;
   justify-content: flex-start;
   align-content: center;
-  border: solid 1px;
   margin-top: 0%;
-  margin-left: 4%;
-  margin-right: 4%;
-  margin-bottom: 2%;
   padding: 2%;
 }
 
@@ -37,12 +39,14 @@ export default {
   align-content: center;
   margin-left: 5%;
   margin-right: 5%;
+  padding: 2%;
+  border-radius: 5px;
   flex: 1;
 }
 
 img {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   justify-self: center;
   align-self: center;
 }
@@ -52,5 +56,21 @@ a {
   margin-left: 3%;
   margin-top: 5%;
   margin-bottom: 1%;
+  color: #929dbd;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* green: #34dba1 */
+.container:hover {
+  background-color: #fff;
+}
+
+.container:hover a {
+  color: #11101b;
+}
+
+.container:hover img {
+  background-image: v-bind(url);
 }
 </style>

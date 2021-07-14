@@ -2,7 +2,7 @@
   <div class="candidate-mini-profile">
     <img
       alt="Candidate-Photo"
-      src="../assets/icons/candidate-photo.svg"
+      src="../assets/icons/user-photos/candidate-photo.svg"
       class="photo"
     />
     <Strong>Rodrigo Alexis Pardo Gatica</Strong>
@@ -30,12 +30,14 @@ export default {
 }
 
 strong {
-  font-size: medium;
+  color: #929dbd;
+  font-size: smaller;
 }
 
 p {
   margin: 0px;
   margin-top: 2%;
   font-size: small;
+  color: #929dbd;
 }
 </style>
