@@ -7,6 +7,10 @@
     >
       <img alt="IconOption" :src="path" />
       <a href=""> {{ value }} </a>
+      <div v-if="editableOptions == 'true'" class="editableOptionsContainer">
+        <img alt="IconDelete" :src="pathDelete" @click="deleteTopic" />
+        <img alt="IconDrag" :src="pathDrag" />
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +22,9 @@ export default {
     value: String,
     pathGrey: String,
     pathGreen: String,
+    pathDelete: String,
+    pathDrag: String,
+    editableOptions: Boolean,
   },
   data() {
     return {
@@ -30,6 +37,9 @@ export default {
     },
     changeGreyIcon() {
       this.path = this.pathGrey;
+    },
+    deleteTopic() {
+      this.$emit("delete-topic");
     },
   },
 };
@@ -48,12 +58,20 @@ export default {
 .container {
   display: flex;
   flex-direction: row;
-  align-content: center;
   margin-left: 5%;
   margin-right: 5%;
   padding: 2%;
   border-radius: 5px;
   flex: 1;
+}
+
+.editableOptionsContainer {
+  display: flex;
+  margin-left: auto;
+}
+
+.editableOptionsContainer img {
+  margin-left: 5px;
 }
 
 img {

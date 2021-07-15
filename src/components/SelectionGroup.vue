@@ -7,8 +7,12 @@
       :value="option.value"
       :pathGrey="option.pathGrey"
       :pathGreen="option.pathGreen"
+      :editableOptions="verifyEditable"
+      :pathDelete="iconDelete"
+      :pathDrag="iconDrag"
+      @delete-topic="updateTopic(index)"
     />
-    <img v-if="groupType == 'topics'" :src="iconAdd" @click="addTopic" />
+    <img v-if="editable == 'true'" :src="iconAdd" @click="addTopic" />
   </div>
 </template>
 
@@ -20,12 +24,14 @@ export default {
   props: {
     nameType: String,
     groupType: String,
+    editable: Boolean,
   },
   components: {
     OptionSelectionGroup,
   },
   data() {
     return {
+      verifyEditable: this.editable,
       sections: [
         {
           value: "Perfil",
@@ -61,6 +67,8 @@ export default {
         },
       ],
       iconAdd: require("@/assets/icons/green/event-add.svg"),
+      iconDelete: require("@/assets/icons/red/event-delete.svg"),
+      iconDrag: require("@/assets/icons/grey/event-drag-handle.svg"),
     };
   },
   computed: {
@@ -71,10 +79,13 @@ export default {
   methods: {
     addTopic() {
       this.$data["topics"].push({
-        value: "Economia",
+        value: "Sin Título",
         pathGrey: require("@/assets/icons/grey/topic-economy.svg"),
         pathGreen: require("@/assets/icons/green/topic-economy.svg"),
       });
+    },
+    updateTopic(index) {
+      this.$data["topics"].splice(index, 1);
     },
   },
 };
@@ -103,7 +114,7 @@ img {
 }
 
 img:hover {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.822);
   padding: 2%;
 }
 </style>

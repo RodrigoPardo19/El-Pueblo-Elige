@@ -1,8 +1,12 @@
 <template>
   <div class="side-bar">
     <CandidateMiniProfile />
-    <SelectionGroup nameType="Secciones" groupType="sections" />
-    <SelectionGroup nameType="Tópicos" groupType="topics" />
+    <SelectionGroup
+      nameType="Secciones"
+      groupType="sections"
+      editable="false"
+    />
+    <SelectionGroup nameType="Tópicos" groupType="topics" editable="true" />
   </div>
 </template>
 
