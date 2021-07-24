@@ -1,0 +1,51 @@
+@startuml El_Pueblo_Elige
+scale 1920 width
+skinparam packageStyle rectange
+skinparam Nodesep 20
+'left to right direction
+
+actor "candidate" as candidate
+actor "citizen" as citizen
+
+
+rectangle "Website El Pueblo Elige" #c0ffc0 {
+	left to right direction
+
+
+	'candidate use case
+	together {
+		(Type and edit a work plan) as (UC01)
+		(Post answers in the forum) as (UC02)
+		(Upload external material) as (UC03)
+		(Deploy a guided tutorial\n of the editing tools) as (UC04)
+	}
+
+	'citizen use case
+	together {
+		(Display the candidate's work plan) as (UC05)
+		(Display the candidate's profile) as (UC06)
+		(Post questions and answer in the forum) as (UC07)
+		(Display information about election process) as (UC08)
+	}
+
+	'Both
+	together {
+		(Authenticate) as (UC09)
+		(Type and edit a profile) as (UC10)
+	}
+
+	(UC10) <- citizen
+	(UC05) <-- citizen
+	(UC06) <-- citizen
+	(UC07) <-- citizen
+	(UC09) <.. (UC07) : include
+	(UC08) <-- citizen
+
+	candidate --> (UC01)
+	candidate --> (UC02)
+	candidate --> (UC03)
+	candidate --> (UC04)
+	candidate -> (UC10)
+}
+
+@enduml

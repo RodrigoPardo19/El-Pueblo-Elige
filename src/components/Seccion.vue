@@ -1,10 +1,8 @@
 <template>
-
-<div class="seccion">
-    <h1>Entrevistas  +</h1>
+  <div class="seccion">
+    <h1>Entrevistas +</h1>
   </div>
 <div class="componenteGeneral">
-  
   <div class="perfiles" >
     <div class= "img">
       <img src = "https://images.unsplash.com/photo-1536115706628-e1abad95f29a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
@@ -25,11 +23,16 @@
     </div>
     <button class="boton3">Editar</button>
   </div>
-</div>
-  
+  </div>
 </template>
-<style scoped>
 
+<script>
+export default {
+  name: "Seccion",
+};
+</script>
+
+<style scoped>
 .seccion {
   text-align: left;
 }
@@ -40,19 +43,17 @@
   height:300px;
   border-radius: 7%;
   position: relative;
-  left: 10px; 
+  left: 10px;
   top: 90px;
-  
 }
 
 .textoSuperior {
   text-align: center;
-  width:50%;
-  height:50%;
-  position:absolute;
-  left:210px; 
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 210px;
   top: 0px;
-
 }
 .textoIntermedio {
   text-align: center;
@@ -61,7 +62,6 @@
   position:absolute;
   left:210px; 
   top: 80px;
-
 }
 .textoInferior {
   text-align: center;
@@ -70,7 +70,6 @@
   position:absolute;
   left:10px; 
   top: 180px;
-
 }
 .boton1{
   position:absolute;
@@ -94,9 +93,8 @@ img {
   image-rendering: optimizeQuality;
   object-fit: cover;
   border-radius: 20%;
-  position: absolute; 
-  left: 0px; 
+  position: absolute;
+  left: 0px;
   top: -90px;
 }
 </style>
-
