@@ -23,7 +23,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../components/Seccion.vue"),
   },
+  {
+    path: "/candidate/profile",
+    name: "CandidateProfile",
+    component: () => import("../views/CandidateProfile.vue"),
+  },
+  {
+    path: "/candidate/media",
+    name: "CandidateMedia",
+    component: () => import("../views/CandidateMedia.vue"),
+  },
 ];
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
