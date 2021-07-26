@@ -1,14 +1,14 @@
 <template>
-<body style="background-color:#F3F1F1;">
+<body >
 <div><NavBar /></div>
 <div><SideBar /></div>
 <div class="Seccion">
   <v-container>
-    <v-col v-for="n in 2" :key="n" sm="9" >
-      <p>
-      <Seccion/>
-      </p>
-    </v-col>
+    <v-row v-for="n in 2" :key="n" sm="9">
+          <p>
+          <Seccion/>
+          </p>
+    </v-row>
   </v-container>
 </div>
 <div class="texto">
@@ -34,6 +34,9 @@ export default {
 </script>
 <style scoped>
 
+body{
+background-color:#F3F1F1;
+}
 .Seccion{
   position: absolute;
   top: 100px;
